@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Международный васюкинский турнир</title>
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/simple-adaptive-slider.css">
+  <link rel="stylesheet" href="./css/btns.css">
+  <link rel="stylesheet" href="./css/media.css">
+  <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+</head>
+
+<body class="page">
+  <header class="header">
+    <div class="container header__container">
+      <a class="logo" href="#"><img class="logo__image" src="img/logo.png" alt="Логотип Международного васюкинского турнира"></a>
+      <div class="header__content">
+        <h1 class="header__title uppercase margin-reset">Превратите уездный город <span class="header-title-capital">в столицу</span> <span class="header-title-earth">земного шара</span></h1>
+        <p class="header__descr margin-reset">Оплатите взнос на&nbsp;телеграммы для&nbsp;организации Международного васюкинского турнира по&nbsp;шахматам</p>
+        <nav class="header__nav">
+          <ul class="header__btns list-reset">
+            <li class="header__item">
+              <a class="btn btn--dark btn-reset" href="#support">Поддержать шахматную мысль</a>
+            </li>
+            <li class="header__item">
+              <a class="btn btn--light btn-reset" href="#details">Подробнее о турнире</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="running-line">
+      <div class="running-wrapper">
+        <div class="running uppercase">Дело помощи утопающим — дело рук самих утопающих!</div>
+        <div class="running uppercase">Шахматы двигают вперед не только культуру, но и экономику!</div>
+        <div class="running uppercase">Лед тронулся, господа присяжные заседатели!</div>
+      </div>
+      <div class="running-wrapper" aria-hidden="true">
+        <div class="running uppercase">Дело помощи утопающим — дело рук самих утопающих!</div>
+        <div class="running uppercase">Шахматы двигают вперед не только культуру, но и экономику!</div>
+        <div class="running uppercase">Лед тронулся, господа присяжные заседатели!</div>
+      </div>
+    </section>
+
+    <section class="support">
+      <div class="container support__container">
+        <div class="support__top">
+          <div class="support__wrapper">
+            <p class="support__descr support__descr--top1 uppercase margin-reset" id="support">Чтобы поддержать Международный васюкинский турнир&nbsp;</p>
+            <p class="support__descr support__descr--top2 uppercase margin-reset">посетите лекцию на&nbsp;тему: <span class="red-text">&laquo;Плодотворная дебютная идея&raquo;</span></p>
+          </div>
+        </div>
+        <div class="support__bottom">
+          <p class="support__descr support__descr--bottom uppercase margin-reset">и&nbsp;Сеанс <span class="red-text">одновременной игры в&nbsp;шахматы на&nbsp;160 досках</span> гроссмейстера О.&nbsp;Бендера</p>
+          <table class="table" cellspacing="0">
+            <tbody>
+              <tr>
+                <th class="table__points th-top"><span class="margin-bottom">Место проведения:&nbsp;</span></th>
+                <th class="table__info th-top">Клуб &laquo;Картонажник&raquo;</th>
+              </tr>
+              <tr>
+                <th class="table__points"><span class="margin-bottom">Дата и время мероприятия:&nbsp;</span></th>
+                <th class="table__info">22&nbsp;июня 1927&nbsp;г.&nbsp;в&nbsp;18:00</th>
+              </tr>
+              <tr>
+                <th class="table__points"><span class="margin-bottom">Стоимость входных билетов:&nbsp;</span></th>
+                <th class="table__info">20 коп.</th>
+              </tr>
+              <tr>
+                <th class="table__points"><span class="no-margin-bottom">Плата за игру:&nbsp;&nbsp;</span></th>
+                <th class="table__info">50 коп.</th>
+              </tr>
+              <tr>
+                <th class="table__points th-bottom"><span class="margin-bottom">Взнос на телеграммы:&nbsp;</span></th>
+                <th class="table__info th-bottom"><span class="red-line">100 руб.</span>21 руб. 16 коп.</th>
+              </tr>
+            </tbody>
+          </table>
+          <p class="support__small margin-reset">По&nbsp;всем вопросам обращаться в&nbsp;администрацию к&nbsp;К.&nbsp;Михельсону</p>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      let table = document.querySelector('.table');
+      let rows = table.querySelectorAll('tr');
+
+      tableSmallInit();
+
+      window.addEventListener('resize', tableSmallMake);
+
+      function tableSmallInit() {
+        if (window.matchMedia("(max-width: 500px)").matches) {
+          for (let row of rows) {
+            let points = row.querySelector('.table__points');
+            let info = row.querySelector('.table__info');
+            points.append(info);
+          }
+        }
+      }
+
+      function tableSmallMake() {
+        tableSmallInit();
+        if (!window.matchMedia("(max-width: 500px)").matches) {
+          for (let row of rows) {
+            let info = row.querySelector('.table__info');
+            row.append(info);
+          }
+        }
+      }
+    </script>
+
+    <section class="stages">
+      <div class="container stages__container">
+        <h2 class="stages__title uppercase margin-reset" id="details">Этапы преображения Васюков
+          <p class="stages__small margin-reset">Будущие источники обогащения васюкинцев</p>
+        </h2>
+        <div class="stages__wrapper">
+          <ul class="stages__cards list-reset">
+            <li class="card card-1">
+              <p class="card__text margin-reset">Строительство железнодорожной магистрали Москва-Васюки</p>
+            </li>
+            <li class="card card-2">
+              <p class="card__text margin-reset">Открытие фешенебельной гостиницы &laquo;Проходная пешка&raquo; и&nbsp;других небоскрёбов</p>
+            </li>
+            <li class="card card-3">
+              <p class="card__text margin-reset">Поднятие сельского хозяйства в радиусе на тысячу километров: производство овощей, фруктов, икры, шоколадных конфет</p>
+            </li>
+            <li class="card card-4">
+              <p class="card__text margin-reset">Строительство дворца для турнира</p>
+            </li>
+            <li class="card card-5">
+              <p class="card__text margin-reset">Размещение гаражей для гостевого автотранспорта</p>
+            </li>
+            <li class="card card-6">
+              <p class="card__text margin-reset">Постройка сверхмощной радиостанции для передачи всему миру сенсационных результатов</p>
+            </li>
+            <li class="card card-7">
+              <p class="card__text margin-reset">Создание аэропорта &laquo;Большие Васюки&raquo; с&nbsp;регулярным отправлением почтовых самолётов и&nbsp;дирижаблей во&nbsp;все концы света, включая Лос-Анжелос и&nbsp;Мельбурн</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <script defer type="module">
+      import Carousel from './script/carousel.js';
+      let carousel = new Carousel();
+      startCarousel();
+      window.addEventListener('resize', startCarousel);
+
+      function startCarousel() {
+        if (document.documentElement.clientWidth <= 500 && !document.querySelector('.carousel-cards')) {
+          carousel.render();
+          carousel.initCarousel();
+        }
+        if (document.documentElement.clientWidth > 500 && document.querySelector('.carousel-cards')) {
+          carousel.removeCarousel();
+        }
+      }
+    </script>
+
+    <section class="participants">
+      <div class="container participants__container">
+        <h2 class="participants__title uppercase margin-reset">Участники турнира</h2>
+        <div class="participants__wrapper">
+        </div>
+        <div class="slider-btns">
+          <button class="slider-btn slider-btn--left btn-reset" aria-label="Прокрутить список участников назад">
+            <svg class="slider-btn__arrow" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="22" cy="22" r="22" transform="rotate(-180 22 22)"/>
+              <path d="M24.5382 30.4614L16.0767 21.9999L24.5382 13.5384" stroke-width="2" stroke-linecap="square"/>
+            </svg>
+          </button>
+          <div class="slider-btns__counter">
+            <span class="slider-btns__current">0</span>&nbsp;<span class="slider-btns__all">/ 6</span>
+          </div>
+          <button class="slider-btn slider-btn--right btn-reset" aria-label="Прокрутить список участников вперёд">
+            <svg class="slider-btn__arrow" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="22" cy="22" r="22"/>
+              <path d="M19.4618 13.5385L27.9233 22L19.4618 30.4615" stroke-width="2" stroke-linecap="square"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <script defer type="module">
+      import SliderLarge from './script/slider-large.js';
+      import SliderMedium from './script/slider-medium.js';
+      import SliderSmall from './script/slider-small.js';
+      import ItcSimpleSlider from './script/simple-adaptive-slider.js';
+      let sliderLarge = new SliderLarge();
+      let sliderMedium = new SliderMedium();
+      let sliderSmall = new SliderSmall();
+      startSlider();
+      window.addEventListener('resize', startSlider);
+
+      function startSlider() {
+        if (document.documentElement.clientWidth <= 868 && !document.querySelector('.slider-small')) {
+          sliderSmall.render();
+        } else if (document.documentElement.clientWidth > 868 && document.documentElement.clientWidth <= 1312 && !document.querySelector('.slider-medium')) {
+          sliderMedium.render();
+        } else if (document.documentElement.clientWidth > 1312 && !document.querySelector('.slider-large')) {
+          sliderLarge.render();
+        }
+
+        sliderInit();
+
+        if (document.documentElement.clientWidth > 868 && document.querySelector('.slider-small')) {
+          sliderSmall.removeSlider();
+        } else if ((document.documentElement.clientWidth > 1312 || document.documentElement.clientWidth <= 868) && document.querySelector('.slider-medium')) {
+          sliderMedium.removeSlider();
+        } else if (document.documentElement.clientWidth <= 1312 && document.querySelector('.slider-large')) {
+          sliderLarge.removeSlider();
+        }
+      }
+
+      function sliderInit() {
+        let slider = new ItcSimpleSlider('.itcss', {
+          loop: true,
+          autoplay: true,
+          interval: 4000
+        });
+
+        sliderCounter();
+
+        document.querySelector('.slider-btn--left').addEventListener('click', () => {
+          slider.prev();
+          sliderCounter();
+        });
+        document.querySelector('.slider-btn--right').addEventListener('click', () => {
+          slider.next();
+          sliderCounter();
+        });
+
+        document.querySelector('.itcss__items').addEventListener('transitionstart', () => {
+          sliderCounter();
+        });
+
+        document.querySelector('.slider-btns').addEventListener('mouseenter', () => {
+          slider.autoplay('stop');
+        });
+        document.querySelector('.slider-btns').addEventListener('mouseleave', () => {
+          slider.autoplay();
+        });
+      }
+
+      function sliderCounter() {
+        let counter = document.querySelector('.itcss__item_active').getAttribute('data-index');
+
+        if (document.documentElement.clientWidth <= 868) {
+          document.querySelector('.slider-btns__current').innerHTML = 1 + (1 * counter);
+        } else if (document.documentElement.clientWidth > 868 && document.documentElement.clientWidth <= 1312) {
+          document.querySelector('.slider-btns__current').innerHTML = 2 + (2 * counter);
+        } else if (document.documentElement.clientWidth > 1312) {
+          document.querySelector('.slider-btns__current').innerHTML = 3 + (3 * counter);
+        }
+      }
+    </script>
+
+    <section class="running-line">
+      <div class="running-wrapper">
+        <div class="running uppercase">Дело помощи утопающим — дело рук самих утопающих!</div>
+        <div class="running uppercase">Шахматы двигают вперед не только культуру, но и экономику!</div>
+        <div class="running uppercase">Лед тронулся, господа присяжные заседатели!</div>
+      </div>
+      <div class="running-wrapper" aria-hidden="true">
+        <div class="running uppercase">Дело помощи утопающим — дело рук самих утопающих!</div>
+        <div class="running uppercase">Шахматы двигают вперед не только культуру, но и экономику!</div>
+        <div class="running uppercase">Лед тронулся, господа присяжные заседатели!</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__container">
+      <p class="footer__text margin-reset">Все персонажи, события и&nbsp;цитаты являются вымышленными и&nbsp;не&nbsp;принадлежат создателям сайта.
+      С&nbsp;подробностями можно познакомиться в&nbsp;главе XXXIV романа Ильи Ильфа и&nbsp;Евгения Петрова &laquo;Двенадцать стульев&raquo;.</p>
+    </div>
+  </footer>
+</body>
+</html>
