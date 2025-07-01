@@ -1,1 +1,5 @@
-The frontend of the site of the international Vasyukin tournament was developed. Added airplane animation in the Stages section. 
+**Тестовое задание Яндекс Crowd** 
+
+Стек: HTML/CSS/JS
+
+Добавлена анимация бегущей строки и самолета.  
